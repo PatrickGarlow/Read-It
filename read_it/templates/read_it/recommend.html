@@ -1,0 +1,26 @@
+{% extends "read_it/base.html" %}
+{% block content %}
+    <div class="normal-page-contents">
+        <div class="content-section">
+            <h1>Recommend Book</h1>
+
+            <h3>Input book information</h3>
+
+              <label for="title">Book Title:</label>
+              <input type="text" id="title" name="title"><br><br>
+              <label for="aname">Author name:</label>
+              <input type="text" id="aname" name="aname"><br><br>
+              <button class="btn btn-outline-info" type="submit" onclick="gohome();">Submit</button>
+
+            <p>Click "Submit" and we will look into adding the book</p>
+
+        </div>
+    </div>
+    <script>
+        function gohome() {
+            var loc = window.location.href;
+            loc = loc.substring(0, loc.length-16);
+            window.location.href = loc;
+        }
+    </script>
+{% endblock content%}

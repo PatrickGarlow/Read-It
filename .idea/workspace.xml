@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="71bd9e32-3c3e-4136-aad0-ebb63e564ab2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fKbRAoh9cJwGX9nyFUypTnqQm1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/read_it/static/read_it/images" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Patrick\read_it_project\media" />
+      <recent name="C:\Users\Patrick\read_it_project\media\profile_pics" />
+      <recent name="C:\Users\Patrick\read_it_project\read_it\static\read_it" />
+      <recent name="C:\Users\Patrick\read_it_project\read_it" />
+      <recent name="C:\Users\Patrick\read_it_project\read_it\static\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Patrick\read_it_project\read_it\static\read_it\images" />
+      <recent name="C:\Users\Patrick\read_it_project\media" />
+      <recent name="C:\Users\Patrick\read_it_project\read_it\templates\read_it\images" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.web_scraper_barnes">
+    <configuration name="New Python File" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="read_it_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Patrick\anaconda3\envs\tensorflow\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Desktop/New Python File.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Quiz" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="read_it_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Patrick\anaconda3\envs\tensorflow\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Desktop/Quiz.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="csv_to_list_for_django" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="read_it_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Patrick\anaconda3\envs\tensorflow\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Desktop/csv_to_list_for_django.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="web_scraper_barnes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="read_it_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Patrick\anaconda3\envs\tensorflow\python.exe" />
+      <option name="WORKING_DIRECTORY" value="D:/Files/Python/web_scraping" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:/Files/Python/web_scraping/web_scraper_barnes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="web_scraper_google" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="read_it_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Patrick\anaconda3\envs\tensorflow\python.exe" />
+      <option name="WORKING_DIRECTORY" value="D:/Files/Python/web_scraping" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:/Files/Python/web_scraping/web_scraper_google.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.New Python File" />
+      <item itemvalue="Python.csv_to_list_for_django" />
+      <item itemvalue="Python.web_scraper_google" />
+      <item itemvalue="Python.Quiz" />
+      <item itemvalue="Python.web_scraper_barnes" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.web_scraper_barnes" />
+        <item itemvalue="Python.csv_to_list_for_django" />
+        <item itemvalue="Python.Quiz" />
+        <item itemvalue="Python.New Python File" />
+        <item itemvalue="Python.web_scraper_google" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="71bd9e32-3c3e-4136-aad0-ebb63e564ab2" name="Default Changelist" comment="" />
+      <created>1595969720333</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595969720333</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596493477535">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1506" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@-1920.0.1920.1080" timestamp="1596128131351" />
+    <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1596493477535" />
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1596044045691">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1596044045691" />
+    <state width="1899" height="173" key="GridCell.Tab.0.bottom" timestamp="1596500266433">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1800" height="467" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@-1920.0.1920.1080" timestamp="1596128909357" />
+    <state width="1899" height="173" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1596500266433" />
+    <state width="1899" height="173" key="GridCell.Tab.0.center" timestamp="1596500266433">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1800" height="467" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@-1920.0.1920.1080" timestamp="1596128909357" />
+    <state width="1899" height="173" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1596500266433" />
+    <state width="1899" height="173" key="GridCell.Tab.0.left" timestamp="1596500266433">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1800" height="467" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@-1920.0.1920.1080" timestamp="1596128909357" />
+    <state width="1899" height="173" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1596500266433" />
+    <state width="1899" height="173" key="GridCell.Tab.0.right" timestamp="1596500266433">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1800" height="467" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@-1920.0.1920.1080" timestamp="1596128909357" />
+    <state width="1899" height="173" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1596500266433" />
+    <state x="-1633" y="15" width="1649" height="866" key="dock-window-1" timestamp="1596499873929">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="618" y="92" width="1622" height="570" key="dock-window-1/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@-1920.0.1920.1080" timestamp="1596128131677" />
+    <state x="-1633" y="15" width="1649" height="866" key="dock-window-1/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1596499873929" />
+    <state x="267" y="170" width="1622" height="672" maximized="true" key="dock-window-2" timestamp="1596140161258">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="267" y="170" width="1622" height="672" maximized="true" key="dock-window-2/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@-1920.0.1920.1080" timestamp="1596140124359" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1596493528852">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1920.0.1920.1080/1920.0.1536.864@0.0.1920.1080" timestamp="1596493528852" />
+  </component>
+</project>

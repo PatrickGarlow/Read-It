@@ -1,0 +1,35 @@
+{% extends "read_it/base.html" %}
+{% load static %}
+{% block content %}
+    {% for book in books %}
+    <div class="detail-page-contents">
+        <div class="left-detail">
+            <h1>{{ book.title }}</h1>
+            <h3>By {{ book.author }}</h3>
+            <h4>
+              {{ book.synopsis }}
+            </h4>
+            <h6>Genre: {{ book.genre }}</h6>
+            <h6>Rating: {{book.rating }} / 5</h6>
+            <h6>Pages: {{ book.number_of_pages}}</h6>
+            {% if book.amazon_link == "N/A" %}
+              <div class="links-three">
+                <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes-Noble-logo.png'  %}" alt="Barnes and Noble"></a>
+                <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/audible.png'  %}" alt="Audible"></a>
+                <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/google.png'  %}" alt="Google"></a>
+              </div>
+            {% else %}
+              <div class="links-four">
+                <a href="{{ book.amazon_link }}"><img src="{% static 'read_it/images/amazon.jpg'  %}" alt="Amazon"></a>
+                <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes-Noble-logo.png'  %}" alt="Barnes and Noble"></a>
+                <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/audible.png'  %}" alt="Audible"></a>
+                <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/google.png'  %}" alt="Google"></a>
+              </div>
+            {% endif %}
+        </div>
+        <div class="right-detail">
+            <img src="{{ book.cover_image_link }}" alt="" class="book-cover">
+        </div>
+    </div>
+    {% endfor %}
+{% endblock content%}
