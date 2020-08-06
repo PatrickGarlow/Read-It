@@ -1,0 +1,1 @@
+web: guinicorn read_it_project.wsgi --log-file -
