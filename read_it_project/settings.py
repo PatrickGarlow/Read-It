@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'loab%s-t(phs4el0)@!(2c=dr_&490o!a)f3-f*28gws6%&n37'
+SECRET_KEY = '64ac0afba9842e5f5bac6018faa74ff5d2585682ba822df0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['read-it-application.herokuapp.com','http://127.0.0.1']
+ALLOWED_HOSTS = ['read-it-application.herokuapp.com','localhost']
 
 
 # Application definition
@@ -33,7 +33,6 @@ ALLOWED_HOSTS = ['read-it-application.herokuapp.com','http://127.0.0.1']
 INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'read_it.apps.ReadItConfig',
-
     'crispy_forms',
     'import_export',
     'django.contrib.admin',

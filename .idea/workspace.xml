@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="71bd9e32-3c3e-4136-aad0-ebb63e564ab2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datadump.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/read_it_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_it_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +29,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -155,10 +158,10 @@
     </configuration>
     <list>
       <item itemvalue="Python.New Python File" />
-      <item itemvalue="Python.csv_to_list_for_django" />
-      <item itemvalue="Python.web_scraper_google" />
       <item itemvalue="Python.Quiz" />
+      <item itemvalue="Python.csv_to_list_for_django" />
       <item itemvalue="Python.web_scraper_barnes" />
+      <item itemvalue="Python.web_scraper_google" />
     </list>
     <recent_temporary>
       <list>
