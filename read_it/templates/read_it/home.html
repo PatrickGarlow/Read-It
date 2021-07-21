@@ -2,77 +2,32 @@
 {% load static %}
 {% load string_replace %}
 {% block content %}
-    {% for book in books %}
-        <div class="main-page-contents">
-          <div class="left">
-            <h1>{{ book.title }}</h1>
-            <h3>By {{ book.author }}</h3>
-            <h4>
-              {{ book.synopsis }}
-            </h4>
-            <h6>Genre: {{ book.genre }}</h6>
-            <h6>Rating: {{book.rating }} / 5</h6>
-            <h6>Pages: {{ book.number_of_pages}}</h6>
-            {% if book.amazon_link == "N/A" %}
-              <div class="links-three">
-                <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes-Noble-logo.png'  %}" alt="Barnes and Noble"></a>
-                <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/audible.png'  %}" alt="Audible"></a>
-                <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/google.png'  %}" alt="Google"></a>
-              </div>
-            {% else %}
-              <div class="links-four">
-                <a href="{{ book.amazon_link }}"><img src="{% static 'read_it/images/amazon.jpg'  %}" alt="Amazon"></a>
-                <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes-Noble-logo.png'  %}" alt="Barnes and Noble"></a>
-                <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/audible.png'  %}" alt="Audible"></a>
-                <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/google.png'  %}" alt="Google"></a>
-              </div>
-            {% endif %}
+  <h1 id="book-title">{{ book.title }}</h1>
+  <img src="{{ book.cover_image_link }}" alt="" class="book-cover">
+  
+  e
+  <script>
+    var title = "{{ book.title }}";
+    function like() {
+      var title2 = title.replace(/ /g,"_");
+      current_url = window.location.href;
+      current_url = current_url.replace("/#","");
+
+      var include = current_url.includes("/");
+
+      if (include) {
+        current_url = current_url.substring(0, current_url.length-1);
+      }
 
 
-          </div>
-          <div class="middle">
-            <img src="{{ book.cover_image_link }}" alt="" class="book-cover">
-            <div class="book-buttons">
-              <a href="{% url 'read-it-home'%}"><img src="{% static 'read_it/images/dislike.png' %}" alt="Dislike" class="dislike"></a>
-              <a href="#"><img src="{% static 'read_it/images/like.png' %}" alt="Like" class="like" onclick="like();"></a>
-            </div>
-          </div>
-          <div class="right">
-            <h1>Liked Books</h1>
-            <div class="right-table">
-              {% if user.is_authenticated %}
-                {% for like in likes %}
-                  <div class="like-book">
-                    <a href="book/{{ like.title|string_replace }}"><img src="{{ like.cover_image_link }}"></a>
-                  </div>
-                {% endfor %}
-              {% endif %}
-            </div>
-          </div>
-        </div>
-        <script>
-          var title = "{{ book.title }}";
-          function like() {
-            var title2 = title.replace(/ /g,"_");
-            current_url = window.location.href;
-            current_url = current_url.replace("/#","");
+      current_url += "/liked/";
+      current_url += title2;
 
-            var include = current_url.includes("/");
+      window.location.href = current_url;
 
-            if (include) {
-              current_url = current_url.substring(0, current_url.length-1);
-            }
+      console.log(current_url);
 
-
-            current_url += "/liked/";
-            current_url += title2;
-
-            window.location.href = current_url;
-
-            console.log(current_url);
-
-          }
-        </script>
-    {% endfor %}
+    }
+  </script>
 
 {% endblock content%}

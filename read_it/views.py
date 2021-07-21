@@ -86,28 +86,29 @@ def setup_book(user):
 
 
 def home(request):
-    book = setup_book(request.user)
-    books = [
-        {
-            'title' : book.title.replace("*","'").replace("|",","),
-            'genre' : book.genre.capitalize(),
-            'author' : book.author.replace("*","'"),
-            'cover_image_link' : book.cover_image_link,
-            'number_of_pages' : book.number_of_pages,
-            'audible_link' : book.audible_link,
-            'barnes_noble_link' : book.barnes_noble_link,
-            'amazon_link' : book.amazon_link,
-            'google_link' : book.google_link,
-            'rating' : book.rating,
-            'synopsis' : book.synopsis.replace("|",",").replace("*","'"),
-            'book_link' : book.title.replace(" ","_"),
-        },
-    ]
+    book_obj = setup_book(request.user)
+    book = {
+    
+        'title' : book_obj.title.replace("*","'").replace("|",","),
+        'genre' : book_obj.genre.capitalize(),
+        'author' : book_obj.author.replace("*","'"),
+        'cover_image_link' : book_obj.cover_image_link,
+        'number_of_pages' : book_obj.number_of_pages,
+        'audible_link' : book_obj.audible_link,
+        'barnes_noble_link' : book_obj.barnes_noble_link,
+        'amazon_link' : book_obj.amazon_link,
+        'google_link' : book_obj.google_link,
+        'rating' : book_obj.rating,
+        'synopsis' : book_obj.synopsis.replace("|",",").replace("*","'"),
+        'book_link' : book_obj.title.replace(" ","_"),
+    }
+    
+    print(book)
     if request.user.is_authenticated:
         likes = request.user.profile.book_set.all()
-        return render(request,'read_it/home.html', {'books':books ,'likes':likes})
+        return render(request,'read_it/home.html', {'book':book ,'likes':likes})
     else:
-        return render(request, 'read_it/home.html', {'books': books})
+        return render(request, 'read_it/home.html', {'book': book})
 
 @login_required
 def upload(request):
@@ -131,15 +132,15 @@ def quiz_response(request, new_genre_profile="0000000000000000000000000000000000
 
     return render(request, 'read_it/quiz_response.html')
 
-@login_required
 def book_liked(request, book_title):
-    title = book_title.replace("_"," ")
-    book = Book.objects.filter(title=title).first()
-    if book==None:
-        pass
-    else:
-        user = request.user.profile
-        book.likes.add(user)
+    if request.user.is_authenticated:
+        title = book_title.replace("_"," ")
+        book = Book.objects.filter(title=title).first()
+        if book==None:
+            pass
+        else:
+            user = request.user.profile
+            book.likes.add(user)
 
     return render(request, 'read_it/book_like.html')
 
