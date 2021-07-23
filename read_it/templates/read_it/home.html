@@ -2,10 +2,57 @@
 {% load static %}
 {% load string_replace %}
 {% block content %}
-  <h1 id="book-title">{{ book.title }}</h1>
-  <img src="{{ book.cover_image_link }}" alt="" class="book-cover">
+  <div class="left-side">
+    <div class="large-info">
+      <h2 class="center-text book-title">{{ book.title }}</h2>
+      <h3 class="center-text book-author">By: {{book.author}}</h3>
+      <h2 class="center-text book-synopsis">{{ book.synopsis }}</h2>
+    </div>
+    {% if book.amazon_link == "N/A" %}
+      <div class="links-three">
+        <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes-Noble-logo.png'  %}" alt="Barnes and Noble"></a>
+        <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/audible.png'  %}" alt="Audible"></a>
+        <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/google.png'  %}" alt="Google"></a>
+      </div>
+    {% else %}
+      <div class="links-four">
+        <a href="{{ book.amazon_link }}"><img src="{% static 'read_it/images/amazon.jpg'  %}" alt="Amazon"></a>
+        <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes-Noble-logo.png'  %}" alt="Barnes and Noble"></a>
+        <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/audible.png'  %}" alt="Audible"></a>
+        <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/google.png'  %}" alt="Google"></a>
+      </div>
+    {% endif %}
+    <div class="moblie-nav-bar">
+
+    </div>
+  </div>
+  <div class="middle-side">
+    
+    <img src="{{ book.cover_image_link }}" alt="" class="book-cover">
+    <div class="mobile-info">
+      <h2 class="center-text book-title">{{ book.title }}</h2>
+      <h3 class="center-text book-author">By: {{book.author}}</h3>
+      <h2 class="center-text book-synopsis">{{ book.synopsis }}</h2>
+    </div>
+    <div class="like-dislike-buttons">
+      <a href="{% url 'read-it-home'%}" ><i class="icon-no fa fa-thumbs-down"></i></a>
+      <a onclick="like()"><i class="icon-yes fa fa-thumbs-up"></i></a>
+    </div>
+    <div class="moblie-nav-bar">
+      <i class="fa-solid fa-money-bill"></i>
+      <i class="fa fa-home"></i>
+      <i class="fa fa-book"></i>
+      
+
+    </div>
+    
+  </div>
+  <div class="right-side">
   
-  e
+  </div>
+  
+  
+  
   <script>
     var title = "{{ book.title }}";
     function like() {

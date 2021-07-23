@@ -103,7 +103,6 @@ def home(request):
         'book_link' : book_obj.title.replace(" ","_"),
     }
     
-    print(book)
     if request.user.is_authenticated:
         likes = request.user.profile.book_set.all()
         return render(request,'read_it/home.html', {'book':book ,'likes':likes})

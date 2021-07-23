@@ -1,3 +1,7 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 .container {
   display: block;
   position: relative;
@@ -63,15 +67,54 @@
 
 @media only screen and (max-width: 600px) {
   body {
-    background-color: orange;
     margin: 0;
   }
   .book-cover {
     width: 100%;
   }
   .page-content {
+    padding: 10px;
+  }
+  .left-side {
+    display: none;
+  }
+  .right-side {
+    display: none;
+  }
+  .like-dislike-buttons {
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 100px;
+    text-align: center;
+  }
+  .like-dislike-buttons a{
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .book-title {
+    font-weight: 400;
+  }
+  .book-synopsis {
+    font-weight: 300;
+  }
+  .book-author {
+    font-weight: 400;
+  }
+  .moblie-nav-bar {
+    background-color: lightgray;
+    text-align: center;
+    width: 120%;
+    height: 90px;
+    margin-left: -10%;
+    margin-bottom: -10%;
+  }
+  .moblie-nav-bar i {
+    padding: 0px 10%;
+    font-size: 45px;
+    color: gray;
+    margin-top:auto;
+    margin-bottom:auto;
   }
 }
 
@@ -86,9 +129,23 @@
 @media only screen and (min-width: 1200px) {
 }
 
+.icon-no {
+  color:red;
+}
+.icon-yes {
+  color:green;
+}
+.no-style {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+}
 
-
-
+.center-text {
+  text-align: center;
+}
 
 
 
@@ -96,6 +153,7 @@
 .topnav {
   overflow: hidden;
   background-color: #0e33b5;
+  
 }
 
 .topnav a {
