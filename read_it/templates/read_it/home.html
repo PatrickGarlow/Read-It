@@ -2,31 +2,35 @@
 {% load static %}
 {% load string_replace %}
 {% block content %}
-  <div class="left-side">
+  <div class="left-side" id="left-side">
     <div class="large-info">
       <h2 class="center-text book-title">{{ book.title }}</h2>
       <h3 class="center-text book-author">By: {{book.author}}</h3>
       <h2 class="center-text book-synopsis">{{ book.synopsis }}</h2>
     </div>
+    <h2>You can find links to purchase or read "{{book.title}}" below.</h2>
     {% if book.amazon_link == "N/A" %}
-      <div class="links-three">
-        <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes-Noble-logo.png'  %}" alt="Barnes and Noble"></a>
-        <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/audible.png'  %}" alt="Audible"></a>
-        <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/google.png'  %}" alt="Google"></a>
+      <div class="links-three links">
+        <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes_&_Noble.svg' %}" alt="Barnes and Noble"></a>
+        <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/Audible.svg'  %}" alt="Audible"></a>
+        <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/Google.svg'  %}" alt="Google"></a>
       </div>
     {% else %}
-      <div class="links-four">
-        <a href="{{ book.amazon_link }}"><img src="{% static 'read_it/images/amazon.jpg'  %}" alt="Amazon"></a>
-        <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes-Noble-logo.png'  %}" alt="Barnes and Noble"></a>
-        <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/audible.png'  %}" alt="Audible"></a>
-        <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/google.png'  %}" alt="Google"></a>
+      <div class="links-four links">
+        <a href="{{ book.amazon_link }}"><img src="{% static 'read_it/images/Amazon.svg'  %}" alt="Amazon"></a>
+        <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes_&_Noble.svg'  %}" alt="Barnes and Noble"></a>
+        <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/Audible.svg'  %}" alt="Audible"></a>
+        <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/Google.svg'  %}" alt="Google"></a>
       </div>
     {% endif %}
     <div class="moblie-nav-bar">
-
+      <a class="icon""><i class="fa-solid fa-money-bill"></i></a>
+      <a class="icon" onclick="showHide('middle-side','left-side')"><i class="fa fa-home"></i></a>
+      <a class="icon" onclick="showHide('right-side','left-side')"><i class="fa fa-book"></i></a>
+      <a href="{% url 'profile' %}"><i class="fas fa-user"></i></a>
     </div>
   </div>
-  <div class="middle-side">
+  <div class="middle-side" id="middle-side">
     
     <img src="{{ book.cover_image_link }}" alt="" class="book-cover">
     <div class="mobile-info">
@@ -39,23 +43,46 @@
       <a onclick="like()"><i class="icon-yes fa fa-thumbs-up"></i></a>
     </div>
     <div class="moblie-nav-bar">
-      <i class="fa-solid fa-money-bill"></i>
-      <i class="fa fa-home"></i>
-      <i class="fa fa-book"></i>
-      
-
+      <a class="icon" onclick="showHide('left-side','middle-side')"><i class="fa-solid fa-money-bill"></i></a>
+      <a class="icon"><i class="fa fa-home"></i></a>
+      <a class="icon" onclick="showHide('right-side','middle-side')"><i class="fa fa-book"></i></a>
+      <a href="{% url 'profile' %}"><i class="fas fa-user"></i></a>
     </div>
     
   </div>
-  <div class="right-side">
-  
+  <div class="right-side" id="right-side">
+    <h1>Liked Books</h1>
+    <div class="right-table">
+      {% if user.is_authenticated %}
+        {% for like in likes %}
+          <div class="like-book">
+            <a href="book/{{ like.title|string_replace }}"><img src="{{ like.cover_image_link }}"></a>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="moblie-nav-bar">
+      <a class="icon" onclick="showHide('left-side','right-side')"><i class="fa-solid fa-money-bill"></i></a>
+      <a class="icon" onclick="showHide('middle-side','right-side')"><i class="fa fa-home"></i></a>
+      <a class="icon"><i class="fa fa-book"></i></a>
+      <a href="{% url 'profile' %}"><i class="fas fa-user"></i></a>
+    </div>
   </div>
   
   
   
   <script>
-    var title = "{{ book.title }}";
+    function showHide(show,hide) {
+      s = document.getElementById(show);
+      h = document.getElementById(hide);
+      
+      h.style.display = "none";
+      s.style.display = "block";
+      window.scrollTo(0, 0);
+    }
+    
     function like() {
+      var title = "{{ book.title }}";
       var title2 = title.replace(/ /g,"_");
       current_url = window.location.href;
       current_url = current_url.replace("/#","");

@@ -1,5 +1,7 @@
 body {
   font-family: 'Lato', sans-serif;
+  margin:0;
+  width: 100%;
 }
 
 .container {
@@ -66,19 +68,19 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    margin: 0;
-  }
   .book-cover {
     width: 100%;
   }
   .page-content {
     padding: 10px;
   }
-  .left-side {
+  #left-side {
     display: none;
   }
-  .right-side {
+  #right-side {
+    display: none;
+  }
+  .large-info {
     display: none;
   }
   .like-dislike-buttons {
@@ -104,21 +106,38 @@ body {
   .moblie-nav-bar {
     background-color: lightgray;
     text-align: center;
-    width: 120%;
+    width: 110%;
     height: 90px;
     margin-left: -10%;
     margin-bottom: -10%;
+    padding: 0px 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .moblie-nav-bar i {
-    padding: 0px 10%;
     font-size: 45px;
     color: gray;
-    margin-top:auto;
-    margin-bottom:auto;
+    margin-top: 15px;
+    bottom: 0;
+  }
+  .links img{
+    width: 100%;
+  }
+  .right-table {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+  }
+  .like-book img {
+    width: 100%;
   }
 }
 
 @media only screen and (min-width: 600px) {
+  body {
+    background-color: chartreuse;
+  }
 }
 
 @media only screen and (min-width: 768px) {
