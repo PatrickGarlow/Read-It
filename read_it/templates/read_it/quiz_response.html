@@ -1,15 +1,13 @@
 {% extends "read_it/base.html" %}
 {% block content %}
-    <div class="normal-page-contents">
-        <div class="content-section">
-            <h1>Your results have been saved!</h1>
-        </div>
+    <div class="quiz-response-page">
+        <h1>Your results have been saved!</h1>
     </div>
     <script type="text/javascript">
         window.onload = function(){
 
             current_url = window.location.href;
-            current_url = current_url.substring(0, current_url.length-51);
+            current_url = current_url.substring(0, current_url.length-50);
             setTimeout(function(){
                 window.location.href = current_url;
             }, 1000);

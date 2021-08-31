@@ -1,82 +1,91 @@
 {% extends "read_it/base.html" %}
 {% block content %}
-    <div class="normal-page-contents">
-        <div class="content-section">
-            <h1>Quiz</h1>
-            <div class="quiz">
+    <div class="quiz">
+        <div>
+            <h1>Personalization Quiz</h1>
+            <div class="quiz-questions">
                 <div class="question1">
                     <h3>Question 1: What sounds good?</h3>
-                    <label class="container"><input type="radio" name="question1" value="History"><h4 style="padding-left:20px;">History</h4><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Ambition</h4><input type="radio" name="question1" value="Ambition"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Wit</h4><input type="radio" name="question1" value="Wit"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Moral Ambiguity</h4><input type="radio" name="question1" value="Moral Ambiguity"><span class="checkmark"></span></label>
+                    <label class="container"><h4>History</h4><input type="radio" name="question1" value="History"><span class="checkmark"></span></label>
+                    <label class="container"><h4>Ambition</h4><input type="radio" name="question1" value="Ambition"><span class="checkmark"></span></label>
+                    <label class="container"><h4>Wit</h4><input type="radio" name="question1" value="Wit"><span class="checkmark"></span></label>
+                    <label class="container"><h4>Moral Ambiguity</h4><input type="radio" name="question1" value="Moral Ambiguity"><span class="checkmark"></span></label>
                 </div>
                 <div class="question2">
                     <h3>Question2: How long do you want the book to be?</h3>
-                    <label class="container"><h4 style="padding-left:20px;">Long</h4><input type="radio" name="question2" value="Long"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Longer</h4><input type="radio" name="question2" value="Longer"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Medium</h4><input type="radio" name="question2" value="Medium"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Short</h4><input type="radio" name="question2" value="Short"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Long</h4><input type="radio" name="question2" value="Long"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Longer</h4><input type="radio" name="question2" value="Longer"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Medium</h4><input type="radio" name="question2" value="Medium"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Short</h4><input type="radio" name="question2" value="Short"><span class="checkmark"></span></label>
                 </div>
                 <div class="question3">
                     <h3>Question 3: What sounds good?</h3>
-                    <label class="container"><h4 style="padding-left:20px;">The Dark Side of Wealth</h4><input type="radio" name="question3" value="The Dark Side of Wealth"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Young Professionals</h4><input type="radio" name="question3" value="Young Professionals"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Social Analysis</h4><input type="radio" name="question3" value="Social Analysis"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Post Apoctolyptic</h4><input type="radio" name="question3" value="Post Apoctolyptic"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >The Dark Side of Wealth</h4><input type="radio" name="question3" value="The Dark Side of Wealth"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Young Professionals</h4><input type="radio" name="question3" value="Young Professionals"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Social Analysis</h4><input type="radio" name="question3" value="Social Analysis"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Post Apoctolyptic</h4><input type="radio" name="question3" value="Post Apoctolyptic"><span class="checkmark"></span></label>
                 </div>
                 <div class="question4">
                     <h3>Question 4: What sounds good?</h3>
-                    <label class="container"><h4 style="padding-left:20px;">Twists and Turns</h4><input type="radio" name="question4" value="Twists and Turns"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Elemental Magic</h4><input type="radio" name="question4" value="Elemental Magic"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Brutal Honesty</h4><input type="radio" name="question4" value="Brutal Honesty"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Positive Read</h4><input type="radio" name="question4" value="Positive Read"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Twists and Turns</h4><input type="radio" name="question4" value="Twists and Turns"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Elemental Magic</h4><input type="radio" name="question4" value="Elemental Magic"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Brutal Honesty</h4><input type="radio" name="question4" value="Brutal Honesty"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Positive Read</h4><input type="radio" name="question4" value="Positive Read"><span class="checkmark"></span></label>
                 </div>
                 <div class="question5">
                     <h3>Question 5: What sounds good? </h3>
-                    <label class="container"><h4 style="padding-left:20px;">Modern Love</h4><input type="radio" name="question5" value="Modern Love"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Memoirs</h4><input type="radio" name="question5" value="Memoirs"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Fantasy</h4><input type="radio" name="question5" value="Fantasy"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Murder Mystery</h4><input type="radio" name="question5" value="Murder Mystery"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Modern Love</h4><input type="radio" name="question5" value="Modern Love"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Memoirs</h4><input type="radio" name="question5" value="Memoirs"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Fantasy</h4><input type="radio" name="question5" value="Fantasy"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Murder Mystery</h4><input type="radio" name="question5" value="Murder Mystery"><span class="checkmark"></span></label>
                 </div>
                 <div class="question6">
                     <h3>Question 6: What sounds good?</h3>
-                    <label class="container"><h4 style="padding-left:20px;">Something Modern</h4><input type="radio" name="question6" value="Something Modern"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Something Haunting</h4><input type="radio" name="question6" value="Something Haunting"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Something Helpful</h4><input type="radio" name="question6" value="Something Helpful"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Something Fun</h4><input type="radio" name="question6" value="Something Fun"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Something Modern</h4><input type="radio" name="question6" value="Something Modern"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Something Haunting</h4><input type="radio" name="question6" value="Something Haunting"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Something Helpful</h4><input type="radio" name="question6" value="Something Helpful"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Something Fun</h4><input type="radio" name="question6" value="Something Fun"><span class="checkmark"></span></label>
                 </div>
                 <div class="question7">
                     <h3>Question 7: What sounds good?</h3>
-                    <label class="container"><h4 style="padding-left:20px;">A real Person</h4><input type="radio" name="question7" value="A real Person"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">An amateur detective</h4><input type="radio" name="question7" value="An amateur detective"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">A headstrong heroine</h4><input type="radio" name="question7" value="A headstrong heroine"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">A royal with a secret</h4><input type="radio" name="question7" value="A royal with a secret"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >A real Person</h4><input type="radio" name="question7" value="A real Person"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >An amateur detective</h4><input type="radio" name="question7" value="An amateur detective"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >A headstrong heroine</h4><input type="radio" name="question7" value="A headstrong heroine"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >A royal with a secret</h4><input type="radio" name="question7" value="A royal with a secret"><span class="checkmark"></span></label>
                 </div>
                 <div class="question8">
                     <h3>Question 8: What sounds good?</h3>
-                    <label class="container"><h4 style="padding-left:20px;">An epic adventure</h4><input type="radio" name="question8" value="An epic adventure"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Thriller</h4><input type="radio" name="question8" value="Thriller"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Romance</h4><input type="radio" name="question8" value="Romance"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Real Stories</h4><input type="radio" name="question8" value="Real Stories"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >An epic adventure</h4><input type="radio" name="question8" value="An epic adventure"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Thriller</h4><input type="radio" name="question8" value="Thriller"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Romance</h4><input type="radio" name="question8" value="Romance"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Real Stories</h4><input type="radio" name="question8" value="Real Stories"><span class="checkmark"></span></label>
                 </div>
                 <div class="question9">
                     <h3>Question 9: What age Range?</h3>
-                    <label class="container"><h4 style="padding-left:20px;">Kids</h4><input type="radio" name="question9" value="Kids"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Teens</h4><input type="radio" name="question9" value="Teens"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Young Adult</h4><input type="radio" name="question9" value="Young Adult"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Adult</h4><input type="radio" name="question9" value="Adult"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Kids</h4><input type="radio" name="question9" value="Kids"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Teens</h4><input type="radio" name="question9" value="Teens"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Young Adult</h4><input type="radio" name="question9" value="Young Adult"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Adult</h4><input type="radio" name="question9" value="Adult"><span class="checkmark"></span></label>
                 </div>
                 <div class="question10">
                     <h3>Question 10: Where do you want to go?</h3>
-                    <label class="container"><h4 style="padding-left:20px;">New York</h4><input type="radio" name="question10" value="New York"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">California</h4><input type="radio" name="question10" value="California"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">Nowhere</h4><input type="radio" name="question10" value="Nowhere"><span class="checkmark"></span></label>
-                    <label class="container"><h4 style="padding-left:20px;">London</h4><input type="radio" name="question10" value="London"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >New York</h4><input type="radio" name="question10" value="New York"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >California</h4><input type="radio" name="question10" value="California"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >Nowhere</h4><input type="radio" name="question10" value="Nowhere"><span class="checkmark"></span></label>
+                    <label class="container"><h4 >London</h4><input type="radio" name="question10" value="London"><span class="checkmark"></span></label>
                 </div>
-                <button class="btn btn-outline-info" type="submit" onclick="calculate()">Submit</button>
+                <div class="quiz-button-container">
+                    <button class="quiz-button" type="submit" onclick="calculate()">Submit</button>
+                </div>
+                
             </div>
         </div>
+    </div>
+    <div class="mobile-nav-bar" id="mobile-nav-bar">
+        <a href="{% url 'read-it-home' %}"><i class="fa-solid fa-money-bill"></i></a>
+        <a href="{% url 'read-it-home' %}"><i class="fa fa-home"></i></a>
+        <a href="{% url 'read-it-home' %}"><i class="fa fa-book"></i></a>
+        <a href="{% url 'profile' %}"><i class="fa fa-user"></i></a>
     </div>
 <script>
     function calculate() {
@@ -185,7 +194,7 @@
             nonfiction_score += 10;
             youngadult_score += 10;
         }
-        else if (question3answer == "Post Apoctolyptic"){
+        else if (question3answer == "Post Apocalyptic"){
             youngadult_score += 20;
             scifi_score += 20;
         }
@@ -446,7 +455,7 @@
 
         current_url = window.location.href;
         current_url = current_url.substring(0, current_url.length-6);
-        current_url += "/quiz_response/";
+        current_url += "quiz_response/";
         current_url += output_str;
 
         window.location.href = current_url;

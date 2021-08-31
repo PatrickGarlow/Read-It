@@ -145,23 +145,21 @@ def book_liked(request, book_title):
 
 def book_detail(request,book_title):
     title = book_title.replace("_", " ")
-    book = Book.objects.filter(title=title).first()
-    books = [
-        {
-            'title': book.title.replace("*", "'").replace("|", ","),
-            'genre': book.genre.capitalize(),
-            'author': book.author.replace("*", "'"),
-            'cover_image_link': book.cover_image_link,
-            'number_of_pages': book.number_of_pages,
-            'audible_link': book.audible_link,
-            'barnes_noble_link': book.barnes_noble_link,
-            'amazon_link': book.amazon_link,
-            'google_link': book.google_link,
-            'rating': book.rating,
-            'synopsis': book.synopsis.replace("|", ",").replace("*", "'"),
-        },
-    ]
-    return render(request, 'read_it/book.html',{'books':books})
+    book_ret = Book.objects.filter(title=title).first()
+    book = {
+            'title': book_ret.title.replace("*", "'").replace("|", ","),
+            'genre': book_ret.genre.capitalize(),
+            'author': book_ret.author.replace("*", "'"),
+            'cover_image_link': book_ret.cover_image_link,
+            'number_of_pages': book_ret.number_of_pages,
+            'audible_link': book_ret.audible_link,
+            'barnes_noble_link': book_ret.barnes_noble_link,
+            'amazon_link': book_ret.amazon_link,
+            'google_link': book_ret.google_link,
+            'rating': book_ret.rating,
+            'synopsis': book_ret.synopsis.replace("|", ",").replace("*", "'"),
+    }
+    return render(request, 'read_it/book.html',{'book':book})
 
 def recommend_book(request):
     return render(request, 'read_it/recommend.html')

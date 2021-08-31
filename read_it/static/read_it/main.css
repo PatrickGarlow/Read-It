@@ -9,17 +9,36 @@ body {
   background-color: white;
 }
 
+.shadow {
+  filter: drop-shadow(0 0 0.25rem rgb(170, 170, 170));
+}
+.book-cover {
+  border-radius: 15px;
+  margin-bottom: 10px
+}
+.like-book a img {
+  border-radius: 10px;
+  height:100%;
+}
+
 .page-content {
   background-color: white;
   margin: 10px;
 }
-
+.home-page {
+  overflow: hidden;
+}
+.middle-side {
+  text-align: center;
+}
+.book-detail-cover {
+  text-align: center;
+}
 
 
 
 .links a img{
   width: 100%;
-  filter: drop-shadow(0 0 0.25rem rgb(170, 170, 170));
   padding: 20px 0px;
 }
 
@@ -66,7 +85,7 @@ body {
   .large-info {
     display: none;
   }
-  .site-header {
+  .top-nav {
     display:none;
   }
   .saved-table {
@@ -101,26 +120,58 @@ body {
   .page-content {
     padding-bottom: 75px;
   }
+  .account-img {
+    height: 150px;
+    filter: drop-shadow(0 0 0.25rem rgb(170, 170, 170));
+  }
+  .media {
+    text-align: center;
+  }
+  .profile-buttons a img{
+    height: 75px;
+    margin: 0px 15px;
+  }
+  .profile-buttons {
+    text-align: center;
+    margin: 25px 0px;
+  }
+  
+  #user-settings {
+    display: none;
+  }
+  #close-user-settings {
+    display: none;
+  }
+  
+  .content-section {
+    margin-top: 50px;
+  }
+  .back-button img {
+    height: 45px;
+  }
+  .back-button {
+    margin-top: 15px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .middle-side {
-    display: none;
+    display: block;
   }
   .left-side {
     display:none;
   }
   .right-side {
-    display:block;
+    display:none;
   }
-  .page-content {
+  .home-page {
     padding-bottom: 150px;
   }
   .large-info {
     display: none;
   }
-  .site-header {
+  .top-nav {
     display:none;
   }
   .mobile-nav-bar {
@@ -175,38 +226,69 @@ body {
   .saved-title {
     font-size: 4em;
   }
+  .account-img {
+    height: 150px;
+    filter: drop-shadow(0 0 0.25rem rgb(170, 170, 170));
+  }
+  .media {
+    text-align: center;
+  }
+  .profile-buttons a img{
+    height: 75px;
+    margin: 0px 15px;
+  }
+  .profile-buttons {
+    text-align: center;
+    margin: 25px 0px;
+  }
   
+  #user-settings {
+    display: none;
+  }
+  #close-user-settings {
+    display: none;
+  }
+  
+  .content-section {
+    margin-top: 50px;
+  }
+  .back-button img {
+    height: 45px;
+  }
+  .back-button {
+    margin-top: 15px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .mobile-nav-bar {
     display: none;
   }
   .top-nav {
     display: block;
-    height: 100px;
-    width: 100%;
+    height: 75px;
     background-color: blue;
+    position: 0px 0px;
   }
   .right-side {
     display: block;
     padding-left: 20px;
     overflow: auto;
-    max-height: 900px;
   }
   .middle-side {
     display: block;
   }
   .left-side {
     display: block;
-    padding-right: 20px;
+    padding: 0px 20px 0px 10px;
     overflow: auto;
-    max-height: 900px;
   }
-  .page-content {
+  .home-page {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    margin: 10px 10px 0px 10px
   }
   .saved-table {
     width: 100%;
@@ -227,17 +309,225 @@ body {
   .large-info {
     display: block;
   }
+  .book-synopsis {
+    font-size: 1.5vw;
+  }
+  .links {
+    width: 80%;
+    padding: 0;
+    align-items: center;
+  }
+  .links a img{
+    padding: 5px 0px;
+  }
+  .mobile {
+    display: none;
+  }
+  .site-logo {
+    height: 100%;
+    margin: 0;
+  }
+  .site-logo img {
+    height: 80%;
+    margin: 10px 0px 0px 10px;
+  }
+  .top-nav {
+    background-color: rgb(0, 43, 161);
+    overflow: hidden;
+    padding: 5px;
+  }
+
+  .profile-button {
+    float:right;
+    font-size: 50px;
+    color:white;
+    margin: 10px 20px 0px 0px;
+  }
+  .saved-title {
+    font-size: 2vw;
+  }
+  
+  .book-title {
+    font-size: 2vw;
+  }
+  .book-author {
+    font-size: 1.5vw;
+  }
+  .book-synopsis {
+    font-size: 1.7vw;
+  }
   .link-title {
-    font-size: 2em;
+    font-size: 1.5vw;
+  }
+  .like-dislike-buttons img {
+    height: 100px;
+    padding: 0 15px;
+  }
+  .back-button {
+    display: none;
+  }
+  .content-section {
+    margin-top: 150px;
+  }
+  #user-settings {
+    margin: 0px 20%;
+  }
+  .book-detail {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 80px; 
+    grid-template-areas: 
+      "left right"; 
+}
+  #book-detail-cover {
+    grid-area: right;
+  }
+  #book-detail-info {
+    grid-area: left;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
+@media only screen and (min-width: 1025px) {
+  
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
+  .saved-title {
+    font-size: 2vw;
+  }
+  
+  .book-title {
+    font-size: 2vw;
+  }
+  .book-author {
+    font-size: 1.5vw;
+  }
+  .book-synopsis {
+    font-size: 1.7vw;
+  }
+  .link-title {
+    font-size: 1.5vw;
+  }
+  .saved-table {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
+
+
+.account-img {
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+.quiz {
+  margin: 0px 10% 160px 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: rgb(0, 43, 161);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.quiz-button {
+  background-color: rgb(0, 43, 161); /* Green */
+  border: none;
+  border-radius: 24px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size:20px;
+  
+}
+.quiz-button-container {
+  text-align: center;}

@@ -1,35 +1,68 @@
 {% extends "read_it/base.html" %}
 {% load static %}
 {% block content %}
-    {% for book in books %}
-    <div class="detail-page-contents">
-        <div class="left-detail">
-            <h1>{{ book.title }}</h1>
-            <h3>By {{ book.author }}</h3>
-            <h4>
-              {{ book.synopsis }}
-            </h4>
-            <h6>Genre: {{ book.genre }}</h6>
-            <h6>Rating: {{book.rating }} / 5</h6>
-            <h6>Pages: {{ book.number_of_pages}}</h6>
-            {% if book.amazon_link == "N/A" %}
-              <div class="links-three">
-                <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes-Noble-logo.png'  %}" alt="Barnes and Noble"></a>
-                <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/audible.png'  %}" alt="Audible"></a>
-                <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/google.png'  %}" alt="Google"></a>
-              </div>
-            {% else %}
-              <div class="links-four">
-                <a href="{{ book.amazon_link }}"><img src="{% static 'read_it/images/amazon.jpg'  %}" alt="Amazon"></a>
-                <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes-Noble-logo.png'  %}" alt="Barnes and Noble"></a>
-                <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/audible.png'  %}" alt="Audible"></a>
-                <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/google.png'  %}" alt="Google"></a>
-              </div>
-            {% endif %}
-        </div>
-        <div class="right-detail">
-            <img src="{{ book.cover_image_link }}" alt="" class="book-cover">
-        </div>
+  <div class="book-detail">
+    <div id="book-detail-cover left-side" class="left-side-book book-detail-cover">
+      <img src="{{ book.cover_image_link }}" alt="" class="book-cover" id="book-cover">
     </div>
-    {% endfor %}
+    <div id="book-detail-info right-side" class="right-side-book">
+
+      <div class="title-author">
+        <h2 class="center-text book-title">{{ book.title }}</h2>
+        <h3 class="center-text book-author">By: {{book.author}}</h3>
+      </div>
+      <h2 class="center-text book-synopsis">{{ book.synopsis }}</h2>
+      
+      
+      <div class="links">
+        <h2 class="link-title center-text mobile">You can find links to purchase or read "{{book.title}}" below.</h2>
+        <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes_&_Noble.svg'  %}" alt="Barnes and Noble"></a>
+        <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/Audible.svg'  %}" alt="Audible"></a>
+        <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/Google.svg'  %}" alt="Google"></a>
+        {% if book.amazon_link != "N/A" %}
+          <a href="{{ book.amazon_link }}"><img src="{% static 'read_it/images/Amazon.svg'  %}" alt="Amazon"></a>
+        {% endif %}
+      </div>
+
+      <div class="mobile-nav-bar" id="mobile-nav-bar">
+        <a href="{% url 'read-it-home' %}"><i class="fa-solid fa-money-bill"></i></a>
+        <a href="{% url 'read-it-home' %}"><i class="fa fa-home"></i></a>
+        <a href="{% url 'read-it-home' %}"><i class="fa fa-book"></i></a>
+        <a href="{% url 'profile' %}"><i class="fa fa-user"></i></a>
+      </div>
+    </div>
+  </div>
+  <script>
+    var image = document.getElementById('book-cover');
+    image.style.width = '100%';
+    if (window.screen.width >= 769){ //desktop
+      var bookCoverMaxHeight = window.innerHeight - document.getElementsByClassName('top-nav')[0].clientHeight - 30;
+      image.style.maxHeight = bookCoverMaxHeight + 'px';
+      var bookCoverNewHeight = (document.getElementsByClassName('left-side-book')[0].clientWidth -20)* 1.6;
+      if(bookCoverMaxHeight < bookCoverNewHeight) {
+        image.style.height = bookCoverMaxHeight-10 + 'px';
+        image.style.width = bookCoverMaxHeight/1.6 + 'px';
+      }
+      else {
+        image.style.height = bookCoverNewHeight + 'px';
+      }
+
+      console.log('hit');
+      document.getElementsByClassName('right-side-book')[0].style.maxHeight = window.innerHeight - document.getElementsByClassName('top-nav')[0].clientHeight - 20 + 'px';
+      document.getElementsByClassName('left-side-book')[0].style.maxHeight = window.innerHeight - document.getElementsByClassName('top-nav')[0].clientHeight - 20 + 'px';
+
+    }
+    else{ //mobile
+      console.log('hit2');
+      var bookCoverMaxHeight = window.innerHeight - document.getElementsByClassName('mobile-nav-bar')[0].clientHeight - 10;
+      var bookCoverNewHeight = (window.innerWidth -20)* 1.6;
+      if(bookCoverMaxHeight < bookCoverNewHeight) {
+        image.style.height = bookCoverMaxHeight + 'px';
+        image.style.width = bookCoverMaxHeight/1.6 + 'px';
+      }
+      else {
+        image.style.height = bookCoverNewHeight + 'px';
+      }
+    }
+  </script>
 {% endblock content%}

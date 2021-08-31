@@ -18,8 +18,9 @@
     </head>
     <body>
         <div class="top-nav">
-            
-        </div>
+            <a class="site-logo" href="{% url 'read-it-home' %}"><img src="{% static 'read_it/images/ReadItLogo.png' %}"></a>
+            <a class="profile-button" href="{% url 'profile' %}"><i class="fas fa-user"></i></a>
+          </div>
         <div class="page-content">
             {% block content %}{% endblock %}
         </div>

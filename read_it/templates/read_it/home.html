@@ -2,14 +2,16 @@
 {% load static %}
 {% load string_replace %}
 {% block content %}
+<div class="home-page">
   <div class="left-side" id="left-side">
     <div class="large-info">
       <h2 class="book-title">{{ book.title }}</h2>
       <h3 class="book-author">By: {{book.author}}</h3>
       <h2 class="book-synopsis">{{ book.synopsis }}</h2>
+      <h2 class="link-title">You can find links to purchase or read <i>"{{book.title}}"</i> below.</h2>
     </div>
-    <h2 class="link-title center-text">You can find links to purchase or read "{{book.title}}" below.</h2>
-    <div class="links">
+    <h2 class="link-title center-text mobile">You can find links to purchase or read "{{book.title}}" below.</h2>
+    <div class="links shadow">
       <a href="{{ book.barnes_noble_link }}"><img src="{% static 'read_it/images/Barnes_&_Noble.svg'  %}" alt="Barnes and Noble"></a>
       <a href="{{ book.audible_link }}"><img src="{% static 'read_it/images/Audible.svg'  %}" alt="Audible"></a>
       <a href="{{ book.google_link}}"><img src="{% static 'read_it/images/Google.svg'  %}" alt="Google"></a>
@@ -26,7 +28,7 @@
   </div>
   <div class="middle-side" id="middle-side">
     
-    <img src="{{ book.cover_image_link }}" alt="" class="book-cover" id="book-cover">
+    <img src="{{ book.cover_image_link }}" alt="" class="book-cover shadow" id="book-cover">
     <div class="mobile-info">
       <div class="title-author">
         <h2 class="center-text book-title">{{ book.title }}</h2>
@@ -35,9 +37,9 @@
       
       <h2 class="center-text book-synopsis">{{ book.synopsis }}</h2>
     </div>
-    <div class="like-dislike-buttons">
-      <a href="{% url 'read-it-home'%}" ><img src="{% static 'read_it/images/circle.svg'  %}"></img></a>
-      <a onclick="like()"><img src="{% static 'read_it/images/circle.svg'  %}"></a>
+    <div class="like-dislike-buttons shadow">
+      <a href="{% url 'read-it-home'%}"><img src="{% static 'read_it/images/dislike.svg'  %}" ></img></a>
+      <a onclick="like()"><img src="{% static 'read_it/images/like.svg'  %}"></a>
     </div>
     <div class="mobile-nav-bar" id="mobile-nav-bar">
       <a class="icon" onclick="showHide('left-side','middle-side')"><i class="fa-solid fa-money-bill"></i></a>
@@ -52,13 +54,13 @@
     {% if user.is_authenticated %}
       <div class="saved-table">
         {% for like in likes %}
-          <div class="like-book">
+          <div class="like-book shadow">
             <a href="book/{{ like.title|string_replace }}"><img src="{{ like.cover_image_link }}"></a>
           </div>
         {% endfor %}
       </div>
     {% else %}
-      <h4>Sign in to view your saved books!</h4>
+      <h4><a href="{% url 'login' %}">Sign in</a> to view your saved books!</h4>
     {% endif %}
     
     <div class="mobile-nav-bar" id="mobile-nav-bar">
@@ -68,7 +70,7 @@
       <a href="{% url 'profile' %}"><i class="fas fa-user"></i></a>
     </div>
   </div>
-  
+</div>  
   
   
   <script>
@@ -83,18 +85,42 @@
 
     var image = document.getElementById('book-cover');
     image.style.width = '100%';
-    if (window.screen.width >= 768){
+    if (window.screen.width >= 769){
+      var bookCoverMaxHeight = window.innerHeight - document.getElementsByClassName('top-nav')[0].clientHeight 
+      - document.getElementsByClassName('like-dislike-buttons')[0].clientHeight- 30;
+      image.style.maxHeight = bookCoverMaxHeight + 'px';
+      var bookCoverNewHeight = (document.getElementById('middle-side').clientWidth -20)* 1.6;
+      if(bookCoverMaxHeight < bookCoverNewHeight) {
+        image.style.height = bookCoverMaxHeight-10 + 'px';
+        image.style.width = bookCoverMaxHeight/1.6 + 'px';
+      }
+      else {
+        image.style.height = bookCoverNewHeight + 'px';
+      }
 
-      var newHeight = window.innerHeight - document.getElementsByClassName('top-nav')[0].clientHeight 
-      - document.getElementsByClassName('like-dislike-buttons')[0].clientHeight - 10;
-      image.style.height = newHeight + 'px';
+      var left = document.getElementById('left-side');
+      var middle = document.getElementById('middle-side');
+      var right = document.getElementById('right-side');
+      var newMaxHeight = window.innerHeight - document.getElementsByClassName('top-nav')[0].clientHeight - 30; //30 for a padding of 10 on the top and bottom
+      left.style.maxHeight = newMaxHeight + 'px';
+      middle.style.maxHeight = newMaxHeight + 'px';
+      right.style.maxHeight = newMaxHeight + 'px';
+
     }
     else{
-      var newHeight = window.innerHeight - document.getElementsByClassName('mobile-nav-bar')[0].clientHeight - 
+      var bookCoverMaxHeight = window.innerHeight - document.getElementsByClassName('mobile-nav-bar')[0].clientHeight - 
       document.getElementsByClassName('mobile-nav-bar')[1].clientHeight -
       document.getElementsByClassName('mobile-nav-bar')[2].clientHeight - 10;
-      image.style.height = newHeight + 'px';
+      var bookCoverNewHeight = (document.getElementById('middle-side').clientWidth -20)* 1.6;
+      if(bookCoverMaxHeight < bookCoverNewHeight) {
+        image.style.height = bookCoverMaxHeight + 'px';
+        image.style.width = bookCoverMaxHeight/1.6 + 'px';
+      }
+      else {
+        image.style.height = bookCoverNewHeight + 'px';
+      }
     }
+    
     
     
     function like() {
