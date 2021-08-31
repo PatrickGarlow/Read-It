@@ -1,4 +1,5 @@
 {% extends "read_it/base.html" %}
+{% load static %}
 {% block content %}
     <div class="quiz">
         <div>
@@ -82,10 +83,10 @@
         </div>
     </div>
     <div class="mobile-nav-bar" id="mobile-nav-bar">
-        <a href="{% url 'read-it-home' %}"><i class="fa-solid fa-money-bill"></i></a>
-        <a href="{% url 'read-it-home' %}"><i class="fa fa-home"></i></a>
-        <a href="{% url 'read-it-home' %}"><i class="fa fa-book"></i></a>
-        <a href="{% url 'profile' %}"><i class="fa fa-user"></i></a>
+        <a href="{% url 'read-it-home' %}"><img src="{% static 'read_it/images/money-bill-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
+        <a href="{% url 'read-it-home' %}"><img src="{% static 'read_it/images/home-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
+        <a href="{% url 'read-it-home' %}"><img src="{% static 'read_it/images/book-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
+        <a href="{% url 'profile' %}"><img src="{% static 'read_it/images/user-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
     </div>
 <script>
     function calculate() {

@@ -20,10 +20,10 @@
       {% endif %}
     </div>
     <div class="mobile-nav-bar" id="mobile-nav-bar">
-      <a class="icon""><i class="fa-solid fa-money-bill"></i></a>
-      <a class="icon" onclick="showHide('middle-side','left-side')"><i class="fa fa-home"></i></a>
-      <a class="icon" onclick="showHide('right-side','left-side')"><i class="fa fa-book"></i></a>
-      <a href="{% url 'profile' %}"><i class="fas fa-user"></i></a>
+      <a class="icon"><img src="{% static 'read_it/images/money-bill-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
+      <a class="icon" onclick="showHide('middle-side','left-side')"><img src="{% static 'read_it/images/home-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
+      <a class="icon" onclick="showHide('right-side','left-side')"><img src="{% static 'read_it/images/book-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
+      <a href="{% url 'profile' %}"><img src="{% static 'read_it/images/user-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
     </div>
   </div>
   <div class="middle-side" id="middle-side">
@@ -42,10 +42,10 @@
       <a onclick="like()"><img src="{% static 'read_it/images/like.svg'  %}"></a>
     </div>
     <div class="mobile-nav-bar" id="mobile-nav-bar">
-      <a class="icon" onclick="showHide('left-side','middle-side')"><i class="fa-solid fa-money-bill"></i></a>
-      <a class="icon"><i class="fa fa-home"></i></a>
-      <a class="icon" onclick="showHide('right-side','middle-side')"><i class="fa fa-book"></i></a>
-      <a href="{% url 'profile' %}"><i class="fa fa-user"></i></a>
+      <a class="icon" onclick="showHide('left-side','middle-side')"><img src="{% static 'read_it/images/money-bill-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
+      <a class="icon"><img src="{% static 'read_it/images/home-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
+      <a class="icon" onclick="showHide('right-side','middle-side')"><img src="{% static 'read_it/images/book-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
+      <a href="{% url 'profile' %}"><img src="{% static 'read_it/images/user-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
     </div>
     
   </div>
@@ -64,10 +64,10 @@
     {% endif %}
     
     <div class="mobile-nav-bar" id="mobile-nav-bar">
-      <a class="icon" onclick="showHide('left-side','right-side')"><i class="fa-solid fa-money-bill"></i></a>
-      <a class="icon" onclick="showHide('middle-side','right-side')"><i class="fa fa-home"></i></a>
-      <a class="icon"><i class="fa fa-book"></i></a>
-      <a href="{% url 'profile' %}"><i class="fas fa-user"></i></a>
+      <a class="icon" onclick="showHide('left-side','right-side')"><img src="{% static 'read_it/images/money-bill-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
+      <a class="icon" onclick="showHide('middle-side','right-side')"><img src="{% static 'read_it/images/home-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
+      <a class="icon"><img src="{% static 'read_it/images/book-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
+      <a href="{% url 'profile' %}"><img src="{% static 'read_it/images/user-solid.svg'  %}" class="mobile-nav-bar-icon"></a>
     </div>
   </div>
 </div>  
