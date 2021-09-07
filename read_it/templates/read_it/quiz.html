@@ -455,11 +455,15 @@
         output_str = business_str + childrens_str + classics_str + fantasy_str + history_str + horror_str + mystery_str + nonfiction_str + scifi_str + sports_str + romance_str + youngadult_str;
 
         current_url = window.location.href;
-        current_url = current_url.substring(0, current_url.length-6);
+        console.log(current_url);
+        current_url = current_url.substring(0, current_url.length-5);
+        console.log(current_url);
         current_url += "quiz_response/";
+        console.log(current_url);
         current_url += output_str;
+        console.log(current_url);
 
-        window.location.href = current_url;
+        //window.location.href = current_url;
     }
 
 </script>
